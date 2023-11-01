@@ -1,4 +1,3 @@
-
 # TypeScript学习笔记
 
 ## ts基础类型
