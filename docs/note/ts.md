@@ -1,4 +1,7 @@
-### ts基础类型
+
+# TypeScript学习笔记
+
+## ts基础类型
 
 - boolean
 - number
@@ -14,7 +17,7 @@
 
 
 
-### 类型断言
+## 类型断言
 
 一般不用，除非情况特殊（尽可能减少在使用阶段使用）
 
@@ -25,7 +28,7 @@
 
 
 
-### interface
+## interface
 
 定义可拓展属性
 
@@ -57,7 +60,7 @@ fn.name = '22'
 
 
 
-### class
+## class
 
 三种修饰符：
 
@@ -101,7 +104,7 @@ const PlayStatic:Con = class Play implements pp, tt {
 
 
 
-### 泛型
+## 泛型
 
  #### 用在函数中
 
@@ -160,7 +163,7 @@ getApi<Res>('url').then(res => {
 
 
 
-#### 用在react中
+### 用在react中
 
 FC就属于一个类型的别名，不然原类型太长了
 
@@ -197,7 +200,7 @@ interface FunctionComponent<P = {}> {
 
 
 
-#### 泛型约束extends
+### 泛型约束extends
 
 泛型中的extends并不是类的继承的意思，他是一种约束，如`<T extends Iprop1>`的意思是T类型必须存在于Iprop1中
 
@@ -227,7 +230,7 @@ type newType = NoneType<boolean> // string
 
 
 
-### 特殊符号
+## 特殊符号
 
 交叉类型 & 表示且
 
@@ -247,7 +250,7 @@ type Factory<P> = (props?: Attributes & P, ...children: ReactNode[]) => ReactEle
 
 
 
-### ts内置类型
+## ts内置类型
 
 Partial
 
@@ -259,7 +262,7 @@ type Partial<T> = {
 
 
 
-### TS高级语法
+## TS高级语法
 
 keyof 获取类型所有key
 
@@ -311,7 +314,7 @@ type Man =  Omit<Person, "sex" | "age">
 
 
 
-### declare
+## declare
 
 导入ts类型给某个函数或对象，一般多用于为历史js项目补充类型说明用，用ts写的新项目基本是用不到这个功能，原理是项目会默认加载`node_modules`下`types`目录下的所有文件
 
