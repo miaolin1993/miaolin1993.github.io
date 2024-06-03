@@ -1,0 +1,66 @@
+.lock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 16px;
+  input {
+    width: 20px;
+    height: 20px;
+  }
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 808px;
+  height: 808px;
+  div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+
+    .dz {
+      position: absolute;
+      right: 4px;
+      bottom: 4px;
+    }
+    .baseName {
+      position: absolute;
+      right: 74px;
+      bottom: 4px;
+    }
+  }
+  .base:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+  .active {
+    background-color: #eee;
+  }
+  .no-border {
+    border: 1px solid transparent;
+  }
+  .no-l-r {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  .no-l {
+    border-left: 1px solid transparent;
+  }
+  .no-d {
+    border-bottom: 1px solid transparent;
+  }
+  .star-box {
+    .main-star {
+      margin-top: 4px;
+      writing-mode: vertical-lr;
+      font-size: 24px;
+    }
+    span:nth-child(1) {
+      color: rgba(221, 4, 4, 0.542);
+    }
+    span:nth-child(2) {
+      color: rgb(4, 14, 103);
+    }
+  }
+}
