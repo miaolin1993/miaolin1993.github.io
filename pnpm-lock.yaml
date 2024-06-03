@@ -13,6 +13,7 @@ specifiers:
   hexo-deployer-git: ^4.0.0
   husky: ^8.0.1
   lint-staged: ^13.0.3
+  postcss-pxtorem: ^6.1.0
   prettier: ^2.7.1
   prettier-plugin-organize-imports: ^3.0.0
   prettier-plugin-packagejson: ^2.2.18
@@ -24,6 +25,7 @@ specifiers:
 dependencies:
   ahooks: 3.8.0_react@18.2.0
   hexo-deployer-git: 4.0.0
+  postcss-pxtorem: 6.1.0
   scss: 0.2.4
 
 devDependencies:
@@ -9374,6 +9376,12 @@ packages:
       postcss: 8.4.31
       postcss-selector-parser: 6.0.13
     dev: true
+
+  /postcss-pxtorem/6.1.0:
+    resolution: {integrity: sha512-ROODSNci9ADal3zUcPHOF/K83TiCgNSPXQFSbwyPHNV8ioHIE4SaC+FPOufd8jsr5jV2uIz29v1Uqy1c4ov42g==}
+    peerDependencies:
+      postcss: ^8.0.0
+    dev: false
 
   /postcss-replace-overflow-wrap/4.0.0_postcss@8.4.31:
     resolution: {integrity: sha512-KmF7SBPphT4gPPcKZc7aDkweHiKEEO8cla/GjcBK+ckKxiZslIu3C4GCRW3DNfL0o7yW7kMQu9xlZ1kXRXLXtw==}

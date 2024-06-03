@@ -1,7 +1,8 @@
 import React, { useMemo, useState, type FC } from 'react';
-import './index.scss';
 import { IMainList } from './type';
 import { getMainList, setBase, setTF, setZW } from './utils';
+import '../rem'
+import './index.scss';
 
 const Tweleve: FC<Element> = () => {
   const [num, setNum] = useState(0);
@@ -55,15 +56,17 @@ const Tweleve: FC<Element> = () => {
                 </div>
               )}
               <span className="dz">{v.title}</span>
-              <span className="baseName">{v.baseName}</span>
+              <div className="baseName">
+                <span>{v.baseName}</span>
+              </div>
             </div>
           );
         })}
       </div>
       <div>
-        <h1>页面主要解决2个场景问题，方便熟悉星系的分布：</h1>
-        <p>1. 紫微在不同宫位时，其他宫位的星系分布</p>
-        <p>2. 锁定紫微位置后，命宫坐不同宫位时，其他星系的分布</p>
+        <h4>该页用于熟悉星系分布，适用2个场景：</h4>
+        <p>1. 紫微星在不同宫位时，其他星系分布</p>
+        <p>2. 锁定紫微盘型后，命宫坐不同宫位时，其他星系的分布</p>
       </div>
     </>
   );
