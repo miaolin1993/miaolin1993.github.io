@@ -1,5 +1,5 @@
-import { base, tf, zw } from './constant';
-import { IMainList } from './type';
+import { base, tf, zw, otherIndexByZw, starStatus } from './constant';
+import { IMainList, IStarNum, IStarName } from './type';
 
 /** 根据紫微位置获取天府位置 */
 export const getTFIndex = (num: number) => {
@@ -39,24 +39,28 @@ export const getMainList = (num: number): IMainList[] => {
       index: 5, // 所属位置
       title: '巳', // 地支
       baseName: '', // 哪个人事宫
+      statusList: [], // 星星亮度
     },
     {
       class: `no-l-r base ${num === 6 ? 'active' : ''}`,
       mainList: [],
       index: 6,
       baseName: '',
+      statusList: [],
       title: '午',
     },
     {
       class: `base ${num === 7 ? 'active' : ''}`,
       mainList: [],
       index: 7,
+      statusList: [],
       baseName: '',
       title: '未',
     },
     {
       class: `no-l no-d base ${num === 8 ? 'active' : ''}`,
       mainList: [],
+      statusList: [],
       baseName: '',
       index: 8,
       title: '申',
@@ -64,6 +68,7 @@ export const getMainList = (num: number): IMainList[] => {
     {
       class: `no-d base ${num === 4 ? 'active' : ''}`,
       mainList: [],
+      statusList: [],
       baseName: '',
       index: 4,
       title: '辰',
@@ -71,6 +76,7 @@ export const getMainList = (num: number): IMainList[] => {
     {
       class: 'no-border',
       mainList: [],
+      statusList: [],
       baseName: '',
       index: 20,
       title: '',
@@ -78,6 +84,7 @@ export const getMainList = (num: number): IMainList[] => {
     {
       class: 'no-border',
       mainList: [],
+      statusList: [],
       index: 30,
       baseName: '',
       title: '',
@@ -86,6 +93,7 @@ export const getMainList = (num: number): IMainList[] => {
       class: `no-d base ${num === 9 ? 'active' : ''}`,
       mainList: [],
       index: 9,
+      statusList: [],
       baseName: '',
       title: '酉',
     },
@@ -93,6 +101,7 @@ export const getMainList = (num: number): IMainList[] => {
       class: `no-d base ${num === 3 ? 'active' : ''}`,
       mainList: [],
       baseName: '',
+      statusList: [],
       index: 3,
       title: '卯',
     },
@@ -100,6 +109,7 @@ export const getMainList = (num: number): IMainList[] => {
       class: 'no-border',
       mainList: [],
       baseName: '',
+      statusList: [],
       index: 40,
       title: '',
     },
@@ -107,6 +117,7 @@ export const getMainList = (num: number): IMainList[] => {
       class: 'no-border',
       mainList: [],
       index: 50,
+      statusList: [],
       baseName: '',
       title: '',
     },
@@ -116,10 +127,12 @@ export const getMainList = (num: number): IMainList[] => {
       baseName: '',
       index: 10,
       title: '戌',
+      statusList: [],
     },
     {
       class: `base ${num === 2 ? 'active' : ''}`,
       mainList: [],
+      statusList: [],
       index: 2,
       title: '寅',
       baseName: '',
@@ -128,6 +141,7 @@ export const getMainList = (num: number): IMainList[] => {
       class: `no-l-r base ${num === 1 ? 'active' : ''}`,
       mainList: [],
       index: 1,
+      statusList: [],
       title: '丑',
       baseName: '',
     },
@@ -137,10 +151,12 @@ export const getMainList = (num: number): IMainList[] => {
       index: 0,
       baseName: '',
       title: '子',
+      statusList: [],
     },
     {
       class: `no-l base ${num === 11 ? 'active' : ''}`,
       mainList: [],
+      statusList: [],
       index: 11,
       baseName: '',
       title: '亥',
@@ -195,4 +211,26 @@ export const setTF = (zwIndex: number, list: IMainList[]) => {
     }
   }
   return list;
+};
+
+// 获取星星的亮度
+export const getStatus = (star: IStarName, otherStar: any) => {
+  if (!star) return ''
+  const i: IStarNum = otherStar[star]
+  const starObj = starStatus[star]
+  return starObj[i]
+}
+
+// 安星系亮度
+export const setStatus = (zwIndex: number, list: IMainList[]) => {
+  // 根据当前紫微index获取到其他星星位置，在根据星星所在位置获取到亮度
+  const otherIndex = otherIndexByZw(zwIndex);
+  const copyList = [...list];
+  for (let i = 0; i <= 15; i++) {
+    const status = copyList[i].mainList.map((star: any) => {
+      return getStatus(star, otherIndex);
+    });
+    copyList[i].statusList = status.filter(v => v)
+  }
+  return copyList;
 };

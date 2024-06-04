@@ -1,7 +1,7 @@
 import React, { useMemo, useState, type FC } from 'react';
 import { IMainList } from './type';
-import { getMainList, setBase, setTF, setZW } from './utils';
-import '../rem'
+import { getMainList, setBase, setStatus, setTF, setZW } from './utils';
+import '../rem';
 import './index.scss';
 
 const Tweleve: FC<Element> = () => {
@@ -11,11 +11,15 @@ const Tweleve: FC<Element> = () => {
   // 是否锁定紫微的位置
   const [isLock, setIsLock] = useState(0);
   const list = useMemo(() => {
+    if (num < 0 || num > 12) {
+      return saveList;
+    }
     const b = getMainList(num);
     if (!isLock) {
       const z = setZW(num, b);
       const t = setTF(num, z);
-      const f = setBase(num, t);
+      const s = setStatus(num, t);
+      const f = setBase(num, s);
       if (!isLock) {
         setSaveList(f);
       }
@@ -38,30 +42,38 @@ const Tweleve: FC<Element> = () => {
         ></input>
       </div>
       <div className="main">
-        {list.map((v) => {
-          return (
-            <div
-              className={v.class}
-              data-index={v.index}
-              key={`${v.index + v.class + v.title}`}
-              onClick={() => setNum(v.index)}
-            >
-              {v.mainList.length && (
-                <div className="star-box">
-                  {v.mainList.map((l, index) => (
-                    <span className="main-star" key={l + index}>
-                      {l}
-                    </span>
-                  ))}
+        {list &&
+          list.map((v) => {
+            return (
+              <div
+                className={v.class + 'boxs'}
+                data-index={v.index}
+                key={`${v.index + v.class + v.title}`}
+                onClick={() => setNum(v.index)}
+              >
+                {v.mainList.length && (
+                  <div className="star-box">
+                    {v.mainList.map((l, index) => (
+                      <span className="main-star" key={l + index}>
+                        {l}
+                      </span>
+                    ))}
+                    <div className='status-box'>
+                      {v.statusList.map((l, index) => (
+                        <span className="status-name" key={l + index}>
+                          {l}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                <span className="dz">{v.title}</span>
+                <div className="baseName">
+                  <span>{v.baseName}</span>
                 </div>
-              )}
-              <span className="dz">{v.title}</span>
-              <div className="baseName">
-                <span>{v.baseName}</span>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
       <div>
         <h4>该页用于熟悉星系分布，适用2个场景：</h4>
