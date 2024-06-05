@@ -46,12 +46,12 @@ const Tweleve: FC<Element> = () => {
           list.map((v) => {
             return (
               <div
-                className={v.class + 'boxs'}
+                className={v.class}
                 data-index={v.index}
                 key={`${v.index + v.class + v.title}`}
                 onClick={() => setNum(v.index)}
               >
-                {v.mainList.length && (
+                {v.mainList.length ? (
                   <div className="star-box">
                     {v.mainList.map((l, index) => (
                       <span className="main-star" key={l + index}>
@@ -66,7 +66,7 @@ const Tweleve: FC<Element> = () => {
                       ))}
                     </div>
                   </div>
-                )}
+                ): null}
                 <span className="dz">{v.title}</span>
                 <div className="baseName">
                   <span>{v.baseName}</span>

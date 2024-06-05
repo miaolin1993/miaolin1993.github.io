@@ -13,7 +13,7 @@
   flex-wrap: wrap;
   width: 375px;
   height: 320px;
-  div {
+  >div {
     position: relative;
     width: 80px;
     height: 80px;
@@ -49,18 +49,47 @@
   .active {
     background-color: #eee;
   }
-  .no-border {
-    border: 1px solid transparent;
+  .no-b {
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
   }
-  .no-l-r {
-    border-left: 1px solid transparent;
+  .no-r {
+    border-right: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+  }
+  .no-b-r {
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+  }
+  .no-b-l {
+    border-left: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  .no-b-l-r {
+    border-left: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #000;
     border-right: 1px solid transparent;
   }
-  .no-l {
-    border-left: 1px solid transparent;
+  .no-b-r-t {
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid #000;
   }
-  .no-d {
-    border-bottom: 1px solid transparent;
+  .no-b-r-t-l {
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
   }
   .star-box {
     .main-star {

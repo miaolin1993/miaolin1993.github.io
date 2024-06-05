@@ -34,7 +34,7 @@ export const getTFIndex = (num: number) => {
 export const getMainList = (num: number): IMainList[] => {
   return [
     {
-      class: `no-d base ${num === 5 ? 'active' : ''}`, // 类名
+      class: `no-b-r base ${num === 5 ? 'active' : ''}`, // 类名
       mainList: [], // 主星列表
       index: 5, // 所属位置
       title: '巳', // 地支
@@ -42,7 +42,7 @@ export const getMainList = (num: number): IMainList[] => {
       statusList: [], // 星星亮度
     },
     {
-      class: `no-l-r base ${num === 6 ? 'active' : ''}`,
+      class: `no-b-r base ${num === 6 ? 'active' : ''}`,
       mainList: [],
       index: 6,
       baseName: '',
@@ -50,7 +50,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '午',
     },
     {
-      class: `base ${num === 7 ? 'active' : ''}`,
+      class: `no-b-r base ${num === 7 ? 'active' : ''}`,
       mainList: [],
       index: 7,
       statusList: [],
@@ -58,7 +58,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '未',
     },
     {
-      class: `no-l no-d base ${num === 8 ? 'active' : ''}`,
+      class: `no-b base ${num === 8 ? 'active' : ''}`,
       mainList: [],
       statusList: [],
       baseName: '',
@@ -66,7 +66,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '申',
     },
     {
-      class: `no-d base ${num === 4 ? 'active' : ''}`,
+      class: `no-b base ${num === 4 ? 'active' : ''}`,
       mainList: [],
       statusList: [],
       baseName: '',
@@ -74,7 +74,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '辰',
     },
     {
-      class: 'no-border',
+      class: 'no-b-l-r',
       mainList: [],
       statusList: [],
       baseName: '',
@@ -82,7 +82,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '',
     },
     {
-      class: 'no-border',
+      class: 'no-b-l',
       mainList: [],
       statusList: [],
       index: 30,
@@ -90,7 +90,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '',
     },
     {
-      class: `no-d base ${num === 9 ? 'active' : ''}`,
+      class: `no-b-l base ${num === 9 ? 'active' : ''}`,
       mainList: [],
       index: 9,
       statusList: [],
@@ -98,7 +98,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '酉',
     },
     {
-      class: `no-d base ${num === 3 ? 'active' : ''}`,
+      class: `no-b-r base ${num === 3 ? 'active' : ''}`,
       mainList: [],
       baseName: '',
       statusList: [],
@@ -106,7 +106,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '卯',
     },
     {
-      class: 'no-border',
+      class: 'no-b-r-t',
       mainList: [],
       baseName: '',
       statusList: [],
@@ -114,7 +114,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '',
     },
     {
-      class: 'no-border',
+      class: 'no-b-r-t-l',
       mainList: [],
       index: 50,
       statusList: [],
@@ -122,7 +122,7 @@ export const getMainList = (num: number): IMainList[] => {
       title: '',
     },
     {
-      class: `no-d base ${num === 10 ? 'active' : ''}`,
+      class: `no-b base ${num === 10 ? 'active' : ''}`,
       mainList: [],
       baseName: '',
       index: 10,
@@ -130,7 +130,7 @@ export const getMainList = (num: number): IMainList[] => {
       statusList: [],
     },
     {
-      class: `base ${num === 2 ? 'active' : ''}`,
+      class: `no-r base ${num === 2 ? 'active' : ''}`,
       mainList: [],
       statusList: [],
       index: 2,
@@ -138,7 +138,7 @@ export const getMainList = (num: number): IMainList[] => {
       baseName: '',
     },
     {
-      class: `no-l-r base ${num === 1 ? 'active' : ''}`,
+      class: `no-r base ${num === 1 ? 'active' : ''}`,
       mainList: [],
       index: 1,
       statusList: [],
@@ -146,7 +146,7 @@ export const getMainList = (num: number): IMainList[] => {
       baseName: '',
     },
     {
-      class: `base ${num === 0 ? 'active' : ''}`,
+      class: `no-r base ${num === 0 ? 'active' : ''}`,
       mainList: [],
       index: 0,
       baseName: '',
@@ -154,7 +154,7 @@ export const getMainList = (num: number): IMainList[] => {
       statusList: [],
     },
     {
-      class: `no-l base ${num === 11 ? 'active' : ''}`,
+      class: `base ${num === 11 ? 'active' : ''}`,
       mainList: [],
       statusList: [],
       index: 11,
