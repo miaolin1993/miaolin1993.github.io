@@ -235,6 +235,7 @@ const patternObj: any = {
   2: {
     0: [savePattern.yxrm, savePattern.spl],
     4: [savePattern.spl],
+    6: [savePattern.xqjy],
     8: [savePattern.qscd],
     10: [savePattern.jxdd, savePattern.wttx],
   },
