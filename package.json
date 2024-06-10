@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "ahooks": "^3.8.0",
+    "antd": "^5.18.0",
     "hexo-deployer-git": "^4.0.0",
     "postcss-pxtorem": "^6.1.0",
     "scss": "^0.2.4"
