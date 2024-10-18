@@ -1,7 +1,0 @@
-# npm install hexo-deployer-git
-# npx hexo d
-
-deploy:
-  type: git
-  repo: git@github.com:miaolin1993/miaolin1993.github.io.git
-  branch: master
