@@ -16,7 +16,7 @@
       <ul>
         <li v-for="item in answer" :key="item">{{ item }}</li>
       </ul>
-      <img src="/images/lufengchongpo/lianxidan.jpg" alt="练习答案" />
+      <img src="/images/lufengchongpo/lianxidan.webp" alt="练习答案" />
     </div>
   </div>
 </template>

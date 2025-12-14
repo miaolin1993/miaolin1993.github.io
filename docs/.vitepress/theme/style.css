@@ -1,0 +1,219 @@
+/**
+ * VitePress 全局样式美化
+ */
+
+/* ========== 字体优化 ========== */
+:root {
+  --vp-font-family-base: 'Microsoft YaHei', sans-serif;
+  --vp-font-size-base: 16px;
+  --vp-line-height-base: 1.8;
+}
+
+/* ========== 段落样式 ========== */
+.vp-doc p {
+  margin: 1.2em 0;
+  word-spacing: 0.05em;
+  letter-spacing: 0.01em;
+}
+
+/* ========== 标题样式美化 ========== */
+.vp-doc h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 1.5em 0 0.8em;
+  padding-bottom: 0.5em;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.vp-doc h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 1.8em 0 0.8em;
+  padding-bottom: 0.4em;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.vp-doc h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 1.5em 0 0.6em;
+  line-height: 1.5;
+}
+
+.vp-doc h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 1.2em 0 0.5em;
+  line-height: 1.5;
+}
+
+.vp-doc h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 1em 0 0.4em;
+  line-height: 1.5;
+}
+
+.vp-doc h6 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0.8em 0 0.3em;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+}
+
+/* ========== 列表样式 ========== */
+.vp-doc ul,
+.vp-doc ol {
+  margin: 1em 0;
+  padding-left: 2em;
+  line-height: 1.8;
+}
+
+.vp-doc ul li,
+.vp-doc ol li {
+  margin: 0.5em 0;
+  padding-left: 0.3em;
+}
+
+.vp-doc ul li::marker {
+  color: var(--vp-c-brand);
+}
+
+.vp-doc ul {
+  list-style-type: disc;
+}
+
+.vp-doc ol {
+  list-style-type: decimal;
+}
+
+
+/* ========== 引用块样式 ========== */
+.vp-doc blockquote {
+  margin: 1.5em 0;
+  padding: 0.8em 1.2em;
+  border-left: 4px solid var(--vp-c-brand);
+  background: var(--vp-c-bg-soft);
+  border-radius: 0 4px 4px 0;
+  color: var(--vp-c-text-2);
+  font-style: normal;
+}
+
+.vp-doc blockquote p {
+  margin: 0.5em 0;
+}
+
+.vp-doc blockquote p:first-child {
+  margin-top: 0;
+}
+
+.vp-doc blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== 表格样式 ========== */
+.vp-doc table {
+  margin: 1.5em 0;
+  border-collapse: collapse;
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+.vp-doc table th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+  padding: 0.8em 1em;
+  border: 1px solid var(--vp-c-divider);
+  text-align: left;
+}
+
+.vp-doc table td {
+  padding: 0.8em 1em;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc table tr:nth-child(even) {
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc table tr:hover {
+  background: var(--vp-c-bg-alt);
+}
+
+/* ========== 链接样式 ========== */
+.vp-doc a {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.vp-doc a:hover {
+  color: var(--vp-c-brand-dark);
+  text-decoration: underline;
+}
+
+/* ========== 图片样式 ========== */
+.vp-doc img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== 水平分割线 ========== */
+.vp-doc hr {
+  margin: 2em 0;
+  border: none;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+
+/* ========== 强调文本 ========== */
+.vp-doc strong {
+  font-weight: bold;
+  color: #8B4513;
+}
+
+/* ========== 响应式优化 ========== */
+@media (max-width: 768px) {
+  .vp-doc {
+    font-size: 15px;
+  }
+  
+  .vp-doc h1 {
+    font-size: 2em;
+  }
+  
+  .vp-doc h2 {
+    font-size: 1.6em;
+  }
+  
+  .vp-doc h3 {
+    font-size: 1.3em;
+  }
+  
+  .vp-doc pre {
+    padding: 1em;
+    font-size: 0.85em;
+  }
+}
+
+/* ========== 移动端侧边栏层级优化 ========== */
+@media (max-width: 768px) {
+  .VPSidebar,
+  .VPNav,
+  .VPNavBar,
+  .VPNavScreen {
+    z-index: 999 !important;
+  }
+  
+  .VPNavScreen .backdrop {
+    z-index: 998;
+  }
+}
