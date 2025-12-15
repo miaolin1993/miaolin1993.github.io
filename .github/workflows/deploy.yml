@@ -32,7 +32,12 @@ jobs:
         with:
           node-version: 22.20.0
           cache: pnpm # 或者 yarn, pnpm 根据你使用的包管理器调整
-      
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.18.1 # 使用最新的稳定
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
       
