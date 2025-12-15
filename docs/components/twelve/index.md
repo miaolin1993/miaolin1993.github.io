@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/zw/base-pan.html">
-    <link rel="canonical" href="/zw/base-pan.html">
-</head>
-<body>
-    <p>正在跳转到 <a href="/zw/base-pan.html">紫微斗数基础盘</a>...</p>
-    <script>
-        if (typeof window !== 'undefined') {
-            window.location.href = '/zw/base-pan.html';
-        }
-    </script>
-</body>
-</html>
+# 东派紫微斗数十二基础盘
+
+<script setup>
+import { Twelve } from '@miaolin777/vue-zw-twelve'
+import '@miaolin777/vue-zw-twelve/style.css'
+</script>
+
+<Twelve />
