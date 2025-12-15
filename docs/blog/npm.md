@@ -42,7 +42,13 @@ npm publish
 
 ```
 
-正常到这就发布成功了，若出现权限问题，要去官网新增一个Access Tokens
+**2FA权限问题**
+
+正常到这就发布成功了，若出现权限问题
+
+最简单办法去官网设置一个2FA，嫌麻烦可以用下面办法跳过
+
+先去官网新增一个Access Tokens
 
 需要勾选Bypass two-factor authentication (2FA)，权限要给可写入
 

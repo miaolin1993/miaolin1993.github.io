@@ -50,14 +50,14 @@
 
 **禄：是指生年禄或者禄存，两个哪个都行，后面就不赘述了**
 
-![离心忌同宫](/images/lufengchongpo/lx.png)
+![离心忌同宫](/images/lufengchongpo/lx.webp)
 
 这也属于迁移宫禄逢冲破
 
 
 ### 向心忌同宫
 
-![向心忌冲](/images/lufengchongpo/xx.png)
+![向心忌冲](/images/lufengchongpo/xx.webp)
 
 疾厄宫引发的向心忌，去了对面还会冲回来，这属于疾厄宫的禄逢冲破，还是属于本宫引发的范畴
 
@@ -77,7 +77,7 @@
 
 ### 向心忌在对宫
 
-![向心忌在对宫](/images/lufengchongpo/xxcp.png)
+![向心忌在对宫](/images/lufengchongpo/xxcp.webp)
 
 跟上一个类似，禄在子女宫，而田宅宫有向心忌，冲了禄，所以就是田宅宫的禄逢冲破
 
@@ -115,6 +115,9 @@
 ## 练习
 
 下图中有几个宫位禄逢冲破？分别都是哪几个？
+
+（最下面有个按钮，点击可查看答案）
+
 ![练习](/images/lufengchongpo/lianxi.webp)
 
 

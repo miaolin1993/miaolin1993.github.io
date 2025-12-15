@@ -1,4 +1,6 @@
-# 东派紫微斗数十二基础盘练习
+# 东派紫微斗数十二基础盘
+
+
 
 <script setup>
 import { Twelve } from '@miaolin777/vue-zw-twelve'

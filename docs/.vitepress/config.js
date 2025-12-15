@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { navConfig } from './configs/navConfig'
-import { sidebarConfig } from './configs/sidebarConfig'
+import { generateSidebar } from './utils/sidebar'
 
 export default defineConfig({
   title: '妙林博客',
@@ -10,7 +10,7 @@ export default defineConfig({
   themeConfig: {
     nav: navConfig,
 
-    sidebar: sidebarConfig,
+    sidebar: generateSidebar(),
     
     socialLinks: [
       { icon: 'github', link: 'https://github.com' }
