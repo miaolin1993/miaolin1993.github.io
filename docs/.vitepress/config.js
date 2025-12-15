@@ -6,7 +6,7 @@ export default defineConfig({
   title: '妙林博客',
   description: 'A VitePress Blog',
   base: '/',
-  
+
   themeConfig: {
     nav: navConfig,
 
@@ -24,6 +24,27 @@ export default defineConfig({
     search: {
       provider: 'local'
     }
+  },
+  vite: {
+    plugins: [
+      {
+        name: 'redirect-plugin',
+        apply: 'serve',
+        configureServer(server) {
+          server.middlewares.use((req, res, next) => {
+            if (req.url === '/components/twelve/' || req.url === '/components/twelve') {
+              res.writeHead(301, { 
+                Location: '/zw/base-pan.html',
+                'Cache-Control': 'no-cache'
+              });
+              res.end();
+              return;
+            }
+            next();
+          });
+        }
+      }
+    ]
   }
 })
 
