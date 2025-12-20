@@ -1,4 +1,9 @@
-# Github Aciton
+---
+date: 2025-03-18 14:30:00
+title: Github Action
+link: /blog/github-action
+---
+# Github Action
 
 大概原理就是提供一个ci脚本，供github action调用执行，存放位置在项目根目录
 

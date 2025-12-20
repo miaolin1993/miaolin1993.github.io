@@ -12,6 +12,7 @@
     "vitepress": "2.0.0-alpha.15"
   },
   "dependencies": {
-    "@miaolin777/vue-zw-twelve": "^0.0.6"
+    "@miaolin777/vue-zw-twelve": "^0.0.6",
+    "gray-matter": "^4.0.3"
   }
 }
