@@ -1,17 +1,20 @@
 <template>
-  <div>
-    <span>最新文章：</span>
-    <div v-for="item in articles" :key="item.title">
-      <a :href="item.link">{{ item.title }}</a>
-    </div>
+  <div class="article-box">
+    <ul v-for="item in articles" :key="item.title">
+      <li class="article">
+        <a :href="item.link">{{ item.title }}</a>
+        <span>{{ item.date }}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref, toRaw } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useData } from 'vitepress'
 const { theme  } = useData()
 const articles = ref([])
+
 onMounted(() => {
   if (theme.value.articles) {
     articles.value = theme.value.articles
@@ -21,3 +24,13 @@ onMounted(() => {
   }
 })
 </script>
+
+<style scoped>
+  .article-box ul {
+    padding: 0;
+  }
+  .article {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

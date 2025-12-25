@@ -1,17 +1,17 @@
 ---
 date: 2025-03-18 14:30:00
-title: Github Action
+title: Github Action一键部署博客
 link: /blog/github-action
 ---
-# Github Action
+# {{ $frontmatter.title }}
 
-大概原理就是提供一个ci脚本，供github action调用执行，存放位置在项目根目录
+大概原理是提供一个ci脚本，供github action监听到对应分支的push操作时，调用执行，存放位置在项目根目录
 
 ```.github/workflows/deploy.yml```
 
 ## 本地项目里配置
 
-我现在用的脚本是这个, 具体根据使用场景调整
+脚本参照这个, 具体根据使用场景调整
 
 ```yml
 name: Deploy to GitHub Pages

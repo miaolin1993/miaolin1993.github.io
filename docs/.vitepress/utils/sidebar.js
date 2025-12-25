@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
+import { format } from "date-fns"
 
 // 获取所有文章目录
 export function getAllCategories(dir = "docs") {
@@ -37,10 +38,14 @@ export function generateSidebar(dir = "docs") {
       items: itemLists,
     }
   })
-  console.log("allFiles: ", allFiles.sort((a, b) => b.date - a.date))
+  const articles = allFiles
+    .slice(0, 5)
+    .sort((a, b) => b.date - a.date)
+    .map((item) => ({ ...item, date: formatDate(item.date).toString() }))
+
   return {
     sidebar,
-    articles: allFiles.sort((a, b) => b.date - a.date)
+    articles,
   }
 }
 
@@ -62,3 +67,5 @@ function readMatter(filePath) {
     return null
   }
 }
+
+const formatDate = (date) => format(date, "yyyy-MM-dd HH:mm:ss")
