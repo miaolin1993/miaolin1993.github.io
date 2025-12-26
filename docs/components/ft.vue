@@ -1,4 +1,3 @@
-```vue
 <template>
   <div class="ft">
     <form class="star-form" @submit.prevent="handleSubmit">
