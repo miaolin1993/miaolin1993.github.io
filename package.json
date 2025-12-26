@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@miaolin777/vue-zw-twelve": "^0.0.6",
+    "@miaolin777/zwpp-data": "^1.0.7",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3"
   }

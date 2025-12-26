@@ -63,3 +63,12 @@ npm publish
 
 该绕过方法存在风险，确保个人电脑信息安全，或是持续交付场景下使用
 
+**私有包权限问题**
+
+可以在packages.json里添加，即可
+```
+  "publishConfig": {
+    "access": "public"
+  },
+```
+
