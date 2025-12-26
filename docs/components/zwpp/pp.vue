@@ -142,6 +142,7 @@ watch(() => [props.date, props.gender], () => {
   align-items: center;
   flex-direction: column;
   position: relative;
+  transform: translatex(15px);
 }
 
 .lx-zw-pp-main {
