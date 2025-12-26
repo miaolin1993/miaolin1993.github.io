@@ -1,6 +1,6 @@
 <template>
-  <div class="lx-zw-container">
-    <div class="lx-zw-main">
+  <div class="lx-zw-pp-container">
+    <div class="lx-zw-pp-main">
       <div
         v-for="v in displayList"
         :class="v.class"
@@ -13,7 +13,7 @@
               <span
                 v-for="(l, index) in v.zwList"
                 :key="`${l}${index}`"
-                class="main-star"
+                class="pp-main-star"
               >
                 {{ l }}
               </span>
@@ -81,7 +81,7 @@
           <span v-if="v.shen" class="shengong">*身</span>
         </div>
       </div>
-      <div class="infos">
+      <div class="pp-infos">
         <div class="base">
           <span>姓名：{{ name }}</span>
           <span>{{ genderState }}</span>
@@ -132,7 +132,7 @@ watch(() => [props.date, props.gender], () => {
 </script>
 
 <style scoped> 
-.lx-zw-container {
+.lx-zw-pp-container {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -144,7 +144,7 @@ watch(() => [props.date, props.gender], () => {
   position: relative;
 }
 
-.lx-zw-main {
+.lx-zw-pp-main {
   display: flex;
   position: relative;
   flex-wrap: wrap;
@@ -250,7 +250,7 @@ watch(() => [props.date, props.gender], () => {
       font-size: 10px;
       writing-mode: vertical-lr;
     }
-    .main-star {
+    .pp-main-star {
       color: rgba(192, 0, 0);
     }
     .tf-star {
@@ -299,7 +299,7 @@ watch(() => [props.date, props.gender], () => {
       background-color: rgba(231, 86, 70);
     }
   }
-  .infos {
+  .pp-infos {
     position: absolute;
     top: 94px;
     left: 94px;
@@ -344,7 +344,7 @@ watch(() => [props.date, props.gender], () => {
 
 /* PC端样式 */
 @media screen and (min-width: 769px) {
-  .lx-zw-main {
+  .lx-zw-pp-main {
     width: 640px;
     height: 600px;
     > div {
@@ -398,7 +398,7 @@ watch(() => [props.date, props.gender], () => {
         padding: 0 1px;
       }
     }
-    .infos {
+    .pp-infos {
       width: 300px;
       height: 300px;
       position: absolute;
