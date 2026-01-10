@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="form-container">
-      <h3>东派紫微斗数排盘</h3>
+      <h3>紫微斗数排盘</h3>
       <form @submit.prevent="submitForm" class="zw-form">
         <div class="form-group">
           <label for="lunarDate">农历时间</label>

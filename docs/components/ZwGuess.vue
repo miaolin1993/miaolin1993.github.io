@@ -1,6 +1,7 @@
 <template>
   <div>
     <button 
+      v-if="!isVisible"
       @click="isVisible = !isVisible"
       :disabled="isVisible"
       :style="{ 
@@ -9,7 +10,7 @@
         cursor: 'pointer'
       }"
     >
-      {{ isVisible ? '怎么样，找对了吗' : '点击查看答案' }}
+      点击查看答案
     </button>
     <div :style="{ display: isVisible ? 'block' : 'none', marginTop: '8px' }">
       一共7个

@@ -117,7 +117,7 @@ const zwResult = computed(() => getMainList(props.date, props.gender))
 // console.log('zwResult:', zwResult.value)
 
 
-const name = ref('东派紫微')
+const name = ref('紫微斗数')
 const date = computed(() => props.date)
 
 

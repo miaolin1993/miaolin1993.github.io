@@ -29,13 +29,14 @@ export function generateSidebar(dir = "docs") {
       return {
         text: fileData.title,
         link: fileData.link,
+        date: fileData.date,
       }
     })
     const indexData = readMatter(path.join(dir, category, "index.md"))
     sidebar[indexData.link] = {
       text: indexData.title,
       collapsed: false,
-      items: itemLists,
+      items: itemLists.sort((a, b) => a.date - b.date),
     }
   })
   const articles = allFiles
