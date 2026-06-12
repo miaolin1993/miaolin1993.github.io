@@ -16,5 +16,11 @@
     "@miaolin777/zwpp-data": "^1.0.7",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "vue-demi"
+    ]
   }
 }
