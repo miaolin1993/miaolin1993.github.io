@@ -28,7 +28,7 @@ jobs:
           fetch-depth: 0 # 不是必需的，但有助于获取完整的 git 历史
       
       - name: Install pnpm
-        run: npm install -g pnpm@latest
+        run: npm install -g pnpm@9.15.4
 
       - name: Setup Node
         uses: actions/setup-node@v4
