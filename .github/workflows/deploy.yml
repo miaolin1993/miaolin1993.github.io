@@ -40,7 +40,8 @@ jobs:
         uses: actions/configure-pages@v3
       
       - name: Install dependencies
-        run: pnpm install # 或者 npm install, yarn install, pnpm install
+        # run: pnpm install # 或者 npm install, yarn install, pnpm install
+        run: pnpm config set auto-install-peers true && pnpm install --no-frozen-lockfile
       
       - name: Build with VitePress
         run: pnpm run docs:build # 根据你的 package.json 脚本调整
