@@ -5,7 +5,7 @@ import { format } from "date-fns"
 
 // 获取所有文章目录
 export function getAllCategories(dir = "docs") {
-  const FILTER_LIST = [".vitepress", "public", "components", "only"]
+  const FILTER_LIST = [".vitepress", "public", "components", "only", "resume"]
   const categories = fs
     .readdirSync(dir)
     .filter((item) => fs.statSync(path.join(dir, item)).isDirectory())
